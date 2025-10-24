@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9f9fb;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #f9f9fb;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  z-index: 10;
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+}
+  to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  background: linear-gradient(to right, #ffffff, #eae6f8);
+  background-size: 200% 100%;
+  background-position: left center;
+  color: #111;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  transition: background-position 0.4s ease, transform 0.2s ease;
+}
+
+.link img {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.link:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+.about {
+  margin-top: 3rem;
+  padding: 0 1rem;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.about p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+@media (min-width: 600px) {
+.container {
+    max-width: 600px;
+    padding: 3rem;
+}
+
+.navbar h1 {
+    font-size: 2rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+}
+}
+
+@media (min-width: 1024px) {
+.container {
+    max-width: 720px;
+    padding: 4rem;
+}
+
+.navbar h1 {
+    font-size: 2.4rem;
+}
+
+.tagline {
+    font-size: 1.25rem;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.link {
+    font-size: 1.05rem;
+    padding: 16px 24px;
+}
+
+.link img {
+    width: 28px;
+    height: 28px;
+}
+
+.about {
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 0 2rem;
+}
+
+.about h2 {
+    font-size: 1.6rem;
+}
+}
+
+@media (max-width: 300px) {
+.container {
+    padding: 1rem 0.5rem;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+}
+
+.tagline {
+    font-size: 0.9rem;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+}
+
+.link {
+    padding: 10px 12px;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.link img {
+    width: 20px;
+    height: 20px;
+}
+
+.about h2 {
+    font-size: 1.2rem;
+}
+
+.about p {
+    font-size: 0.9rem;
+}
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KSlink</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h1>Connect with Kristy</h1>
+  </header>
+
+  <main class="container fade-in">
+    <img src="assets/profile.jpg" alt="Kristy's Profile Photo" class="profile-pic" />
+    <p class="tagline" id="typewriter"></p>
+
+    <div class="links">
+      <a href="https://wa.me/+2348164845541" class="link">
+        <img src="assets/whatsapp.svg" alt="WhatsApp" /> WhatsApp
+      </a>
+      <a href="https://www.snapchat.com/add/kristy.c4" class="link">
+        <img src="assets/snapchat.svg" alt="Snapchat" /> Snapchat
+      </a>
+      <a href="mailto:kstiana1@gmail.com" class="link">
+        <img src="assets/gmail.svg" alt="Gmail" /> Gmail
+      </a>
+      <a href="https://open.spotify.com/user/316yby7lxpuigzm6qbjukr4azye4" class="link">
+        <img src="assets/spotify.svg" alt="Spotify" /> Spotify
+      </a>
+      <a href="https://m.facebook.com/profile.php?id=61582375997402" class="link">
+        <img src="assets/facebook.svg" alt="Facebook" /> Facebook
+      </a>
+      <a href="https://x.com/KsTiana1" class="link">
+        <img src="assets/x.svg" alt="X" /> X
+      </a>
+      <a href="https://tiktok.com/@kristyc.4" class="link">
+        <img src="assets/tiktok.svg" alt="TikTok" /> TikTok
+      </a>
+      <a href="https://discord.com/users/kristy_01" class="link">
+        <img src="assets/discord.svg" alt="Discord" /> Discord
+      </a>
+    </div>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        I’m Kristy — a frontend developer who loves clean design, curated playlists, and creating beautiful digital moments. I enjoy building interfaces that feel intuitive and expressive, and I'm always vibing to something fresh in the background while I code.
+      </p>
+    </section>
+
+    <footer>© 2025 KSlink — coded with vibes ✨</footer>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const aboutSection = document.querySelector('.about');
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            aboutSection.classList.add('visible');
+}
+},
+        { threshold: 0.2}
+);
+
+      if (aboutSection) {
+        observer.observe(aboutSection);
+}
+});
+
+    const text = "Frontend Developer | Playlist Curator";
+    const target = document.getElementById("typewriter");
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        target.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 60);
+}
+}
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+</body>
+</html>
